@@ -42,16 +42,6 @@ export default function FlameCase1() {
     'Available',
     ], []);
 
-  // "": 912,
-  // "AI_H": -1,
-  // "Compound_No": "BCS-DA51393",
-  // "FPRIM_CT_L_SEPTTR_ED50_Median_NoPrefix": 6.0e-3,
-  // "MolWeight_(mean)": 3.1976e2,
-  // "PICa1_SEPTTR_FPRIM_CT_(median)": 99,
-  // "PICa2_SEPTTR_PRO_from_FPRIM_H2L_and_L2P_(median)": 180,
-  // "PICa3_SEPTTR PRO_FGV1_FGV2_FCER1_and_FCSPEC_M_(median)": 188,
-  // "VTR": 79,
-  // "DScore": 0.8886696016880077
 
   const definitions = React.useMemo(() => {
     return [
