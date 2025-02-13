@@ -7,7 +7,7 @@ import { VisynApp, VisynHeader } from '../app';
 const LazyFlameCase1 = React.lazy(() => import('./Cases/FlameCase1'));
 const LazyFlameCase2 = React.lazy(() => import('./Cases/FlameCase2'));
 const LazyFlameCase3 = React.lazy(() => import('./Cases/FlameCase3'));
-const TestCase = React.lazy(() => import('./Cases/ExampleCase'));
+const TestCase = React.lazy(() => import('./Cases/FlameCasePDD'));
 
 export function MainApp() {
   return (
@@ -32,7 +32,7 @@ export function MainApp() {
           <Tabs.Tab value="gallery">Case Study 1</Tabs.Tab>
           <Tabs.Tab value="messages">Case Study 2</Tabs.Tab>
           <Tabs.Tab value="settings">Case Study 3</Tabs.Tab>
-          <Tabs.Tab value="test">Case Study 4</Tabs.Tab>
+          <Tabs.Tab value="test">PDD Example</Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="gallery">

@@ -20,10 +20,19 @@ export default function CimeFlameTree({
 }: {
   dataset: Record<string, unknown>[];
   definitions: ParameterColumn[];
-  mode: 'experiment' | 'prediction';
+  mode: 'experiment' | 'prediction' | 'pdd';
   maxIterations?: number;
 }) {
-  const dataKey = mode === 'experiment' ? 'measured_yield' : 'meas_yield';
+  // const dataKey = mode === 'experiment' ? 'measured_yield' : 'meas_yield';
+  function determineDataKey(mode: String,){   
+    switch(mode){   
+        case 'experiment': return 'measured_yield';
+        case 'prediction': return 'meas_yield';
+        case'pdd': return 'DScore';
+        default: return 'default';      
+    }
+  }
+  const dataKey = determineDataKey(mode)
 
   const [iteration, setIteration] = React.useState<number>(0);
   const [layering, setLayering] = React.useState<string[]>(definitions.map((column) => column.key));
